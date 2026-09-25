@@ -20,6 +20,16 @@ Every result is validated against SciPy in the test suite, so the library can be
 
 ## Installation
 
+Install the latest version directly from GitHub:
+
+```bash
+pip install "git+https://github.com/GUELORD-MWENDERWA/statistics-from-scratch.git"
+```
+
+Or download the wheel from the [latest release](https://github.com/GUELORD-MWENDERWA/statistics-from-scratch/releases/latest) and run `pip install statlab-0.1.0-py3-none-any.whl`.
+
+For development:
+
 ```bash
 git clone https://github.com/GUELORD-MWENDERWA/statistics-from-scratch.git
 cd statistics-from-scratch
@@ -45,6 +55,18 @@ sl.mean_ci(a)                           # (72.281, 77.719), 95 % interval for me
 fit = sl.linear_regression([1, 2, 3, 4, 5, 6], [2.1, 3.9, 6.2, 7.8, 10.1, 12.2])
 fit["slope"], fit["r2"]                 # (2.02, 0.9982)
 ```
+
+## Results
+
+The figures below are produced by the library itself. Regenerate them with `pip install matplotlib && python docs/make_figures.py`.
+
+![Student t densities and discrete distributions computed by statlab](docs/images/distributions.png)
+
+*Student t densities and discrete distributions computed by statlab*
+
+![Least-squares fit with the confidence interval of the slope](docs/images/regression.png)
+
+*Least-squares fit with the confidence interval of the slope*
 
 ## How the distributions are computed
 
